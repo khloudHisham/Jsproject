@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khloud's E-commerce</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- Font Awesome icons -->
+    <script
+      src="https://kit.fontawesome.com/bcb2c05d90.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <!-- External scripts and stylesheets for icons and additional libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-typeahead@2.4.1/dist/bootstrap-typeahead.min.js"></script>
+
+    <!-- Bootstrap CSS for nav bar icons -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    />
+
+    <!------------------------best products start--------------------------->
+    
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+    <!------------------------best products End--------------------------->
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="./index.html" class="navbar-brand">
+          <img src="./image/logo.png" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html"
+                ><i class="fas fa-home"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./#categories-section"
+                ><i class="fas fa-list"></i> Categories</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html"
+                ><i class="fas fa-info-circle"></i> About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link card-link" href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <div id="cartAmount" class="cartAmount">0</div>
+              </a>
+            </li>
+            <li class="nav-item">
+              <form class="form-inline my-2 my-lg-0">
+                <div class="input-group">
+                  <input
+                    id="searchInput"
+                    class="form-control typeahead"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-success" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!----------------------------------slider----------------------------------->
+    <div id="slider">
+      <div class="slider-item active">
+        <img src="./image/slider/s1 (1).jpg" class="slider-img" alt="Slide 1" />
+        <div class="slider-caption">
+          <h5>Best Collections</h5>
+          <p>NEW ARRIVALS</p>
+          <button>Shop Now</button>
+        </div>
+      </div>
+
+      <div class="slider-item">
+        <img src="./image/slider/s1 (2).jpg" class="slider-img" alt="Slide 3" />
+        <div class="slider-caption">
+          <h5>Best Price & Offer</h5>
+          <p>NEW SEASONS</p>
+          <button>Sale Offer</button>
+        </div>
+      </div>
+      <div class="slider-arrow left" onclick="prevSlide()">‹</div>
+      <div class="slider-arrow right" onclick="nextSlide()">›</div>
+
+      <div class="slider-item">
+        <img src="./image/slider/s1 (5).jpg" class="slider-img" alt="Slide 3" />
+        <div class="slider-caption">
+          <h5>Best Collections</h5>
+          <p>NEW ARRIVALS</p>
+          <button>About Us</button>
+        </div>
+      </div>
+      <div class="slider-arrow left" onclick="prevSlide()">‹</div>
+      <div class="slider-arrow right" onclick="nextSlide()">›</div>
+
+      <div class="slider-item">
+        <img src="./image/slider/s1 (4).jpg" class="slider-img" alt="Slide 3" />
+        <div class="slider-caption">
+          <h5>Best Price & Offer</h5>
+          <p>NEW ARRIVALS</p>
+          <button>Contact Us</button>
+        </div>
+      </div>
+      <div class="slider-arrow left" onclick="prevSlide()">‹</div>
+      <div class="slider-arrow right" onclick="nextSlide()">›</div>
+
+      <div class="slider-item">
+        <img src="./image/slider/s1 (3).jpg" class="slider-img" alt="Slide 3" />
+        <div class="slider-caption">
+          <h5>Best Collections</h5>
+          <p>NEW ARRIVALS</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+      <div class="slider-arrow left" onclick="prevSlide()">‹</div>
+      <div class="slider-arrow right" onclick="nextSlide()">›</div>
+    </div>
+
+    <!------------------------Slider End---------------------->
+    
+    <div class="container" id="categories-section">
+      <!-- Header with Font Awesome icon -->
+      <div class="row">
+        <div class="col-12 text-center mb-4">
+          <h1 class="font-weight-bold">OUR Categories</h1>
+        </div>
+      </div>
+    </div>
+    <section id="product1" class="section-p1">
+      <div class="filter-buttons">
+        <button onclick="filterProducts('men\'s clothing')">
+          Men's Clothing
+        </button>
+        <button onclick="filterProducts('jewelery')">Jewelry</button>
+        <button onclick="filterProducts('electronics')">Electronics</button>
+        <button onclick="filterProducts('women\'s clothing')">
+          Women's Clothing
+        </button>
+        <button onclick="filterProducts('ALL')">All</button>
+      </div>
+      <div class="pro-container" id="productsContainer">
+        <!-- Product cards will be dynamically added here -->
+      </div>
+    </section>
+
+    <script>
+      ///////////////////////// Categories section JS start ///////////////////////
+
+      // Initialize cart counter when the page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        updateCartCounter();
+        fetchProducts("all"); // Fetch all products when the page loads
+      });
+
+      function displayProducts(products) {
+        const productsContainer = document.getElementById("productsContainer");
+        productsContainer.innerHTML = "";
+
+        if (products.length === 0) {
+          const cartAmount = document.getElementById("cartAmount");
+          cartAmount.textContent = "0"; // Reset cartAmount to 0 when there are no products
+        } else {
+          products.forEach((product) => {
+            const productCard = document.createElement("div");
+            productCard.className = "pro";
+            productCard.innerHTML = `
+                <img src="${product.image}" alt="${product.title}" onclick="redirectToProductDetail('${product.id}')">
+                <div class="des">
+                  <span>${product.category}</span>
+                  <h5>${product.title}</h5>
+                  <div class="star">
+                    <i class="fas fa-star" onclick="addToCart(event)"></i>
+                    <i class="fas fa-star half-star" onclick="addToCart(event)"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-stroke" onclick="addToCart(event)"></i>
+                  </div>
+                  <h4>${product.price} ${product.currency}</h4>
+                  <a href="#" onclick="addToCart(event); return false;"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                </div>
+              `;
+            productsContainer.appendChild(productCard);
+          });
+        }
+      }
+
+      function fetchProducts(category) {
+        const cartAmount = document.getElementById("cartAmount");
+
+
+        fetch("https://product-beta-six.vercel.app/products")        
+          .then((response) => response.json())
+          .then((products) => {
+            console.log("All Products:", products);
+            const lowercasedCategory = category.toLowerCase();
+            const filteredProducts =
+              lowercasedCategory === "all"
+                ? products
+                : products.filter(
+                    (product) =>
+                      product.category.toLowerCase() === lowercasedCategory
+                  );
+
+            console.log("Filtered Products:", filteredProducts);
+
+            if (filteredProducts.length === 0) {
+              // Set cartAmount to 0 if there are no products
+              cartAmount.textContent = "0";
+              displayProducts([]);
+            } else {
+              displayProducts(filteredProducts);
+            }
+          })
+          .catch((error) => console.error("Error fetching products:", error));
+      }
+
+      function filterProducts(category) {
+        // Convert the category to lowercase to match the API convention
+        const lowercaseCategory = category.toLowerCase();
+        fetchProducts(lowercaseCategory);
+      }
+
+      function redirectToProductDetail(productId) {
+        // Save the product ID in a cookie
+        document.cookie = `selectedProductId=${productId}; path=/`;
+        window.location.href = `detail.html`; // Redirect to the detail page
+      }
+
+      function addToCart(event) {
+        event.preventDefault();
+        const cartAmount = document.getElementById("cartAmount");
+        const currentCount = parseInt(cartAmount.textContent, 10);
+        const newCount = currentCount + 1;
+
+        // Get the product details
+        const productContainer = event.target.closest(".pro");
+        const product = {
+          image: productContainer.querySelector("img").src,
+          title: productContainer.querySelector(".des h5").textContent,
+          price: productContainer.querySelector(".des h4").textContent,
+        };
+
+        // Check if the price is a valid number, otherwise set it to a default value
+        product.price = !isNaN(parseFloat(product.price))
+          ? parseFloat(product.price)
+          : 0.0;
+
+        // Update the cartAmount and store it in localStorage
+        cartAmount.textContent = newCount;
+        localStorage.setItem("cartAmount", newCount.toString());
+
+        // Retrieve existing cart products from the cookie or initialize an empty array
+        const existingCartProducts =
+          JSON.parse(getCookie("cartProducts")) || [];
+
+        // Add the new product to the array
+        existingCartProducts.push(product);
+
+        // Store the updated cart products array in the cookie
+        document.cookie = `cartProducts=${JSON.stringify(
+          existingCartProducts
+        )}; path=/`;
+
+        // Redirect to the cart page after adding the product
+        window.location.href = "cart.html";
+      }
+
+      //*************************************** Update the cart counter on the navbar ********************/
+      function updateCartCounter() {
+        const cartAmount = document.getElementById("cartAmount");
+        const cartProducts = JSON.parse(getCookie("cartProducts")) || [];
+
+        // Update the cart counter based on the number of products in the cart
+        cartAmount.textContent = cartProducts.length;
+        localStorage.setItem("cartAmount", cartProducts.length.toString());
+      }
+
+      // Helper function to get a specific cookie by name
+      function getCookie(name) {
+        const cookies = document.cookie.split(";");
+        const cookie = cookies.find((cookie) =>
+          cookie.trim().startsWith(`${name}=`)
+        );
+        return cookie ? cookie.split("=")[1] : null;
+      }
+    </script>
+    <!------------------------best products start--------------------------->
+
+    <section class="banner">
+      <h1 style="font-weight:bold ; text-align:center;margin-bottom:50px;">#Top Rated Products</h1>
+      <div class="banner__wrapper">
+        <div class="banner__card">
+          <img src="assets/tt3.png" alt="banner" />
+          <div class="banner__content">
+            <h4>Bora Bora</h4>
+            <div class="banner__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <p>
+              Surrender to the allure of Bora Bora, a tropical paradise
+              surrounded by turquoise waters and coral reefs.
+            </p>
+          </div>
+        </div>
+        <div class="banner__card">
+          <img src="assets/elec3.png" alt="banner" />
+          <div class="banner__content">
+            <h4>Banff National Park</h4>
+            <div class="banner__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <p>
+              Hike through alpine meadows, take a scenic drive along the
+              Icefields Parkway, and soak in the beauty of the Canadian Rockies.
+            </p>
+          </div>
+        </div>
+        <div class="banner__card">
+          <img src="assets/elec4.png" alt="banner" />
+          <div class="banner__content">
+            <h4>Barcelona</h4>
+            <div class="banner__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <p>
+              The city's vibrant street life, world-class cuisine, and
+              Mediterranean beaches make it a must-visit destination.
+            </p>
+          </div>
+        </div>
+        <div class="banner__card">
+          <img src="assets/t5.png" alt="banner" />
+          <div class="banner__content">
+            <h4>Cape Town</h4>
+            <div class="banner__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <p>
+              From the iconic Table Mountain and historic Robben Island to the
+              scenic Cape Winelands, this South African gem offers a blend of
+              natural beauty, history, and modern sophistication.
+            </p>
+          </div>
+        </div>
+        <div class="banner__card">
+          <img src="assets/elec6.png" alt="banner" />
+          <div class="banner__content">
+            <h4>Queenstown</h4>
+            <div class="banner__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <p>
+              Nestled against the backdrop of the Southern Alps, Queenstown is a
+              haven for adventure enthusiasts.
+            </p>
+          </div>
+        </div>
+        <div class="banner__card">
+          <img src="assets/dress1.png" alt="banner" />
+          <div class="banner__content">
+            <h4>Santorini</h4>
+            <div class="banner__ratings">
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+              <span><i class="ri-star-fill"></i></span>
+            </div>
+            <p>
+              Known for its romantic sunsets, vibrant culture, and delicious
+              cuisine, this Greek island is a paradise for travelers seeking
+              both relaxation and adventure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  
+
+
+
+
+
+
+
+
+
+    <!------------------------best products End--------------------------->
+
+
+    
+    
+    <!-------------------------------------Footer----------------------------------->
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-col" id="company">
+            <img src="image/logoo.png" alt="" class="logo" />
+            <p>
+              We are specialized in designings, make your business a brand. Try
+              our premium services.
+            </p>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col" id="services">
+            <h3>Services</h3>
+            <div class="links">
+              <a href="#">Illustration</a>
+              <a href="#">Creatives</a>
+              <a href="#">Poster Design</a>
+              <a href="#">Card Design</a>
+            </div>
+          </div>
+
+          <div class="footer-col" id="useful-links">
+            <h3>Links</h3>
+            <div class="links">
+              <a href="#">About</a>
+              <a href="#">Services</a>
+              <a href="#">Our Policy</a>
+              <a href="#">Help</a>
+            </div>
+          </div>
+
+          <div class="footer-col" id="useful-links">
+            <h3>Contacts</h3>
+            <div class="links">
+              <a href="#">+2-8755856858</a>
+              <a href="#">+3-876352781</a>
+              <a href="#">+1-8755856858</a>
+              <a href="#">+1-8755856858</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+
+    <!--Footer-->
+    <!-----------------------------up button start------------------>
+    <button id="backToTopBtn" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- ============Up button End ===========================================-->
+
+    <!------------------Best product start------------------>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+        <!------------------Best product End------------------>
+
+    
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
